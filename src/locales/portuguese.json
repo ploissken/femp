@@ -3,7 +3,26 @@
     "title": "FEMP ENGENHARIA",
     "description": "Análises Estruturais utilizando o Método dos Elementos Finitos para obtenção de soluções de engenharia: novos projetos, avaliação de estruturas existentes e estudos de otimização."
   },
-  "message": {
-    "hello": "olá mundo"
+  "portfolio": {
+    "analysis": {
+      "title": "TIPOS DE ANÁLISES MAIS REALIZADOS",
+      "bullet_1": "Análise estática linear: para obtenção de tensões e deslocamentos;",
+      "bullet_2": "Análise estática não-linear (geométrica e/ou constitutiva): para obtenção de tensões e deslocamentos em casos de grandes deslocamentos e/ou deformação plástica do material;",
+      "bullet_3": "Análise de flambagem: para obtenção dos modos de flambagem e seus respectivos coeficientes (razão entre carga crítica de flambagem e carga real aplicada);",
+      "bullet_4": "Análise modal: para obtenção de modos e frequências naturais de vibração;",
+      "bullet_5": "Análise de fadiga: para obtenção de vida útil remanescente considerando-se cargas variáveis aplicadas no domínio do tempo.",
+      "bullet_6": "Análises dinâmicas de resposta no tempo, harmônica, aleatória e espectral: para obtenção de resultados em respostas às excitações ou cargas respectivamente de bases variáveis e choques mecânicos, senoidal e cossenoidal, randômica e de espectro como por exemplo abalo sísmico.",
+      "bullet_7": "Análises térmica estacionária: para obtenção de temperaturas considerando-se as transferências de calor através de condução, convecção e radiação."
+    },
+    "title": "ANÁLISE ESTRUTURAL UTILIZANDO O MÉTODO DOS ELEMENTOS FINITOS",
+    "subtitle": "Simulação Numérica (CAE – Computer -Aided Engineering)",
+    "description_one": "A análise estrutural utilizando o método dos elementos finitos (simulação numérica computacional) é extremamente importante e eficiente para auxílio no dimensionamento de novos projetos estruturais, assim como na verificação de estruturas existentes.",
+    "description_two": "Com o método dos elementos finitos há ganho de tempo de execução de projetos, entendimento de problemas com maior aprofundamento da análise de causa raiz de falhas estruturais e maior fidelidade na representação do problema físico real, obtendo-se resultados que garantem a Segurança e Integridade Estrutural de Sistemas e Conjuntos Mecânicos.",
+    "simulation": {
+      "linear": "ANÁLISE ESTÁTICA LINEAR",
+      "buckling": "ANÁLISE DE FLAMBAGEM",
+      "modal": "ANÁLISE MODAL",
+      "fatigue": "ANÁLISE DE FADIGA"
+    }
   }
 }
