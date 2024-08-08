@@ -1,4 +1,8 @@
 {
+  "home": {
+    "title": "FEMP ENGENHARIA",
+    "description": "Análises Estruturais utilizando o Método dos Elementos Finitos para obtenção de soluções de engenharia: novos projetos, avaliação de estruturas existentes e estudos de otimização."
+  },
   "message": {
     "hello": "olá mundo"
   }
