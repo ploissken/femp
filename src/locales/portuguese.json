@@ -21,6 +21,26 @@
       "value_6": "Adaptabilidade"
     }
   },
+  "clients": {
+    "title": "CLIENTES & PARCEIROS",
+    "names": {
+      "1": "Mais Projeto Engenharia",
+      "2": "Ferrotec",
+      "3": "Vale",
+      "4": "Aerocris",
+      "5": "JP Projetos Industriais",
+      "6": "R1 Engenharia",
+      "7": "Rede Montagens Eletromecânicas"
+    }
+  },
+  "contact": {
+    "title": "CONTATO",
+    "phone": "(15) 99788-0890",
+    "email_1": "Comercial: comercial@fempengenharia.com.br",
+    "email_2": "Administrativo: adm@fempengenharia.com.br",
+    "email_3": "Engenharia: pablo.barreto@fempengenharia.com.br",
+    "address": "Endereço: Rua Manoel de Oliveira Lima, 268, Jardim Horto Florestal I. CEP: 18.074-757, Sorocaba-SP."
+  },
   "home": {
     "title": "FEMP ENGENHARIA",
     "description": "Análises Estruturais utilizando o Método dos Elementos Finitos para obtenção de soluções de engenharia: novos projetos, avaliação de estruturas existentes e estudos de otimização."

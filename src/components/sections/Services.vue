@@ -15,11 +15,14 @@
     </v-row>
     <v-row class="my-16">
       <v-slide-group show-arrows mobile center-active :scroll-offset="60">
-        <v-slide-group-item v-for="{ img, title } in serviceItems" :key="title">
+        <v-slide-group-item
+          v-for="(, index) in serviceImages.length"
+          :key="index"
+        >
           <v-sheet class="ma-4" :width="160">
-            <v-img :src="img" :height="100" />
+            <v-img :src="serviceImages[index]" :height="100" />
             <h4 class="my-6 text-center text-uppercase">
-              {{ $t(title) }}
+              {{ $t(`services.example.${index + 1}`) }}
             </h4>
           </v-sheet>
         </v-slide-group-item>
@@ -49,67 +52,22 @@ import s15 from "../../assets/services/service-15.jpg";
 export default {
   data() {
     return {
-      serviceItems: [
-        {
-          img: s1,
-          title: "services.example.1",
-        },
-        {
-          img: s2,
-          title: "services.example.2",
-        },
-        {
-          img: s3,
-          title: "services.example.3",
-        },
-        {
-          img: s4,
-          title: "services.example.4",
-        },
-        {
-          img: s5,
-          title: "services.example.5",
-        },
-        {
-          img: s6,
-          title: "services.example.6",
-        },
-        {
-          img: s7,
-          title: "services.example.7",
-        },
-        {
-          img: s8,
-          title: "services.example.8",
-        },
-        {
-          img: s9,
-          title: "services.example.9",
-        },
-        {
-          img: s10,
-          title: "services.example.10",
-        },
-        {
-          img: s11,
-          title: "services.example.11",
-        },
-        {
-          img: s12,
-          title: "services.example.12",
-        },
-        {
-          img: s13,
-          title: "services.example.13",
-        },
-        {
-          img: s14,
-          title: "services.example.14",
-        },
-        {
-          img: s15,
-          title: "services.example.15",
-        },
+      serviceImages: [
+        s1,
+        s2,
+        s3,
+        s4,
+        s5,
+        s6,
+        s7,
+        s8,
+        s9,
+        s10,
+        s11,
+        s12,
+        s13,
+        s14,
+        s15,
       ],
     };
   },

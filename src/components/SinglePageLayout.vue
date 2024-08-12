@@ -3,4 +3,6 @@
   <Portfolio />
   <About />
   <Services />
+  <Clients />
+  <Contact />
 </template>
