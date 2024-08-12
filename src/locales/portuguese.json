@@ -46,5 +46,41 @@
       "modal": "ANÁLISE MODAL",
       "fatigue": "ANÁLISE DE FADIGA"
     }
+  },
+  "services": {
+    "title": "SERVIÇOS",
+    "description": "Os serviços prestados pela FEMP Engenharia de análise estrutural utilizando o método dos Elementos Finitos se aplicam a diversos segmentos.",
+    "example": {
+      "1": "Cobertura Metálica",
+      "2": "Cobertura de Ginásio Poliesportivo Escolar",
+      "3": "Deck Residencial Metálico",
+      "4": "Forno para Vagoneta",
+      "5": "Guindaste Portuário",
+      "6": "Galpão Industrial",
+      "7": "Jack Up - Plataforma Autoelevatória",
+      "8": "Lança de Carregador de Navios",
+      "9": "Juntas Parafusadas",
+      "10": "Olhais de Içamento",
+      "11": "Painel Estrutural",
+      "12": "Passarela Metálica",
+      "13": "Queimador",
+      "14": "Tenaz",
+      "15": "Totens Publicitários de Postos de Gasolina"
+    },
+    "segment": {
+      "1": "Estruturas Metálicas em geral",
+      "2": "Aeronáutico",
+      "3": "Automotivo e Transportes",
+      "4": "Ferroviário",
+      "5": "Portuário",
+      "6": "Máquinas e Equipamentos",
+      "7": "Mineração",
+      "8": "Indústria Pesada",
+      "9": "Siderúrgico",
+      "10": "Desenvolvimento de Peças e Produtos",
+      "11": "Marítimo",
+      "12": "Arquitetura e Engenharia Civil",
+      "13": "Petroquímico"
+    }
   }
 }

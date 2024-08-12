@@ -30,7 +30,7 @@
     </v-row>
     <v-row class="my-16">
       <v-col cols="12" md="6">
-        <v-img src="../assets/portfolio-analysis.jpg" cover />
+        <v-img src="../../assets/portfolio-analysis.jpg" cover />
       </v-col>
       <v-col cols="12" md="6">
         <h1>{{ $t("portfolio.analysis.title") }}</h1>

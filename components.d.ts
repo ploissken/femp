@@ -12,6 +12,7 @@ declare module 'vue' {
     Portfolio: typeof import('./src/components/sections/Portfolio.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Services: typeof import('./src/components/sections/Services.vue')['default']
     SinglePageLayout: typeof import('./src/components/SinglePageLayout.vue')['default']
   }
 }
