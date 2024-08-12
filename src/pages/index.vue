@@ -1,8 +1,3 @@
 <template>
-  <Home />
-  <Portfolio />
+  <SinglePageLayout />
 </template>
-
-<script setup>
-//
-</script>

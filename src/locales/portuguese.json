@@ -1,4 +1,26 @@
 {
+  "about": {
+    "title": "QUEM SOMOS",
+    "company_focus": "A FEMP Engenharia é uma empresa do ramo da engenharia com foco em solução de problemas vinculados à necessidade de análise estrutural, utilizando-se métodos de cálculos analíticos e principalmente o Método dos Elementos Finitos (computacional). Possui uma equipe técnica e parceiros/consultores com mais de 15 anos de experiência nesse segmento.",
+    "company_plus": "Embora o foco seja a análise estrutural, em caso de necessidade do cliente trabalhos de elaboração e detalhamento de projetos também são realizados.",
+    "mission": {
+      "title": "MISSÃO",
+      "description": "Desenvolver serviços técnicos de alta qualidade objetivando-se a minimização/eliminação de riscos de falhas e colapsos estruturais."
+    },
+    "vision": {
+      "title": "VISÃO",
+      "description": "Obtenção de credibilidade por parte de seus clientes por ser uma empresa que preza pela qualidade técnica, compromisso por cumprimento de prazos e construção de relacionamento de respeito a longo prazo entre empresa, colaboradores e clientes."
+    },
+    "values": {
+      "title": "VALORES",
+      "value_1": "Transparência",
+      "value_2": "Respeito às pessoas",
+      "value_3": "Respeito às questões Ambientais e de Segurança",
+      "value_4": "Melhoria Contínua",
+      "value_5": "Profissionalismo",
+      "value_6": "Adaptabilidade"
+    }
+  },
   "home": {
     "title": "FEMP ENGENHARIA",
     "description": "Análises Estruturais utilizando o Método dos Elementos Finitos para obtenção de soluções de engenharia: novos projetos, avaliação de estruturas existentes e estudos de otimização."

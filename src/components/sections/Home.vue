@@ -1,5 +1,5 @@
 <template>
-  <v-parallax src="../assets/home-bg.jpg">
+  <v-parallax src="../../assets/home-bg-2.png">
     <v-container>
       <v-row>
         <v-col cols="12" md="6" class="mt-16 text-black">

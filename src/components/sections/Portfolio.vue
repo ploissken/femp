@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row>
+    <v-row class="my-16">
       <v-col cols="12" md="6">
         <h1>{{ $t("portfolio.title") }}</h1>
         <h3>{{ $t("portfolio.subtitle") }}</h3>
@@ -28,7 +28,7 @@
         </v-carousel>
       </v-col>
     </v-row>
-    <v-row class="mt-10">
+    <v-row class="my-16">
       <v-col cols="12" md="6">
         <v-img src="../assets/portfolio-analysis.jpg" cover />
       </v-col>
@@ -46,10 +46,10 @@
 
 <script>
 // https://vitejs.dev/guide/assets.html#importing-asset-as-url
-import linear from "../assets/simulations/linear.jpg";
-import buckling from "../assets/simulations/buckling.jpg";
-import modal from "../assets/simulations/modal.jpg";
-import fatigue from "../assets/simulations/fatigue.jpg";
+import linear from "../../assets/simulations/linear.jpg";
+import buckling from "../../assets/simulations/buckling.jpg";
+import modal from "../../assets/simulations/modal.jpg";
+import fatigue from "../../assets/simulations/fatigue.jpg";
 
 export default {
   data() {
