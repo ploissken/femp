@@ -2,10 +2,10 @@
   <v-container>
     <v-row class="my-16">
       <v-col cols="12" md="6">
-        <h1>{{ $t("portfolio.title") }}</h1>
-        <h3>{{ $t("portfolio.subtitle") }}</h3>
-        <p class="mt-2">{{ $t("portfolio.description_one") }}</p>
-        <p class="mt-2">{{ $t("portfolio.description_two") }}</p>
+        <h2>{{ $t("portfolio.title") }}</h2>
+        <h4>{{ $t("portfolio.subtitle") }}</h4>
+        <p class="mt-2 text-justify">{{ $t("portfolio.description_one") }}</p>
+        <p class="mt-2 text-justify">{{ $t("portfolio.description_two") }}</p>
       </v-col>
       <v-col cols="12" md="6">
         <v-carousel
@@ -32,9 +32,9 @@
       <v-col cols="12" md="6">
         <v-img src="../../assets/portfolio-analysis.jpg" cover />
       </v-col>
-      <v-col cols="12" md="6">
-        <h1>{{ $t("portfolio.analysis.title") }}</h1>
-        <ul>
+      <v-col cols="12" md="6" class="px-8">
+        <h2>{{ $t("portfolio.analysis.title") }}</h2>
+        <ul class="text-justify">
           <li v-for="i in 7" :key="i">
             {{ $t(`portfolio.analysis.bullet_${i}`) }}
           </li>

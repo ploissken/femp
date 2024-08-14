@@ -4,7 +4,7 @@
       <v-row>
         <v-col cols="12" md="6" class="mt-16 text-black">
           <h1>{{ $t("home.title") }}</h1>
-          <p>{{ $t("home.description") }}</p>
+          <p class="text-justify">{{ $t("home.description") }}</p>
         </v-col>
       </v-row>
     </v-container>

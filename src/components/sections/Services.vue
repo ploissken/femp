@@ -3,10 +3,11 @@
     <v-row class="my-16">
       <v-col cols="12" md="6">
         <h1>{{ $t("services.title") }}</h1>
-        <p>{{ $t("services.description") }}</p>
+        <p class="text-justify">{{ $t("services.description") }}</p>
       </v-col>
-      <v-col cols="12" md="6">
-        <ul>
+      <v-spacer />
+      <v-col cols="11" md="4">
+        <ul class="px-6">
           <li v-for="segment in 13" :key="segment">
             {{ $t(`services.segment.${segment}`) }}
           </li>

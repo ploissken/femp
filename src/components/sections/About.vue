@@ -3,22 +3,24 @@
     <v-container>
       <v-row class="my-16">
         <v-col cols="12" md="6">
-          <h1>{{ $t("about.title") }}</h1>
-          <p>{{ $t("about.company_focus") }}</p>
-          <p>{{ $t("about.company_plus") }}</p>
+          <h2>{{ $t("about.title") }}</h2>
+          <p class="text-justify">{{ $t("about.company_focus") }}</p>
+          <p class="text-justify pt-2">{{ $t("about.company_plus") }}</p>
         </v-col>
       </v-row>
       <v-row class="my-16">
-        <v-col>
-          <h2>{{ $t("about.mission.title") }}</h2>
-          <p>{{ $t("about.mission.description") }}</p>
+        <v-col cols="12" md="3">
+          <h3>{{ $t("about.mission.title") }}</h3>
+          <p class="text-justify">{{ $t("about.mission.description") }}</p>
         </v-col>
-        <v-col>
-          <h2>{{ $t("about.vision.title") }}</h2>
-          <p>{{ $t("about.vision.description") }}</p>
+        <v-spacer />
+        <v-col cols="12" md="3">
+          <h3>{{ $t("about.vision.title") }}</h3>
+          <p class="text-justify">{{ $t("about.vision.description") }}</p>
         </v-col>
-        <v-col>
-          <h2>{{ $t("about.values.title") }}</h2>
+        <v-spacer />
+        <v-col cols="12" md="3">
+          <h3>{{ $t("about.values.title") }}</h3>
           <ul>
             <li v-for="value in 6" :key="value">
               {{ $t(`about.values.value_${value}`) }}
