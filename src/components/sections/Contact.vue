@@ -3,30 +3,16 @@
     <v-container>
       <v-row class="my-16">
         <v-spacer />
-        <v-col cols="12" md="6">
+        <v-col cols="12" md="5">
           <h1>{{ $t("contact.title") }}</h1>
-          <p v-for="row in contactData" class="my-2">
-            {{ $t(`contact.${row}`) }}
-          </p>
+          <p class="my-2">{{ $t(`contact.phone`) }}</p>
+          <a :href="`mailto:${$t('contact.email')}`">
+            <p class="my-2">{{ $t(`contact.email`) }}</p>
+          </a>
+          <p class="mt-2">{{ $t(`contact.address_1`) }}</p>
+          <p>{{ $t(`contact.address_2`) }}</p>
         </v-col>
       </v-row>
     </v-container>
   </v-container>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      contactData: [
-        "title",
-        "phone",
-        "email_1",
-        "email_2",
-        "email_3",
-        "address",
-      ],
-    };
-  },
-};
-</script>

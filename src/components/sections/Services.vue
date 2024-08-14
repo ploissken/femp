@@ -8,7 +8,7 @@
       <v-spacer />
       <v-col cols="11" md="4">
         <ul class="px-6">
-          <li v-for="segment in 13" :key="segment">
+          <li v-for="segment in 14" :key="segment">
             {{ $t(`services.segment.${segment}`) }}
           </li>
         </ul>

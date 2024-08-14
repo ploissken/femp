@@ -36,10 +36,9 @@
   "contact": {
     "title": "CONTATO",
     "phone": "(15) 99788-0890",
-    "email_1": "Comercial: comercial@fempengenharia.com.br",
-    "email_2": "Administrativo: adm@fempengenharia.com.br",
-    "email_3": "Engenharia: pablo.barreto@fempengenharia.com.br",
-    "address": "Endereço: Rua Manoel de Oliveira Lima, 268, Jardim Horto Florestal I. CEP: 18.074-757, Sorocaba-SP."
+    "email": "comercial@fempengenharia.com.br",
+    "address_1": "Rua Doutor Pompílio Mercadante, 398, Sala 1316",
+    "address_2": "Centro, Jacareí-SP. CEP: 12.308-510"
   },
   "home": {
     "title": "FEMP ENGENHARIA",
@@ -100,7 +99,8 @@
       "10": "Desenvolvimento de Peças e Produtos",
       "11": "Marítimo",
       "12": "Arquitetura e Engenharia Civil",
-      "13": "Petroquímico"
+      "13": "Petroquímico",
+      "14": "Papel e Celulose"
     }
   }
 }
