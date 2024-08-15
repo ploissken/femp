@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container id="clients">
     <v-row class="justify-center my-6">
       <v-col cols="12" class="my-6">
         <h1>{{ $t("clients.title") }}</h1>
