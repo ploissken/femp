@@ -7,6 +7,7 @@
     <Services />
     <Clients />
     <Contact />
+    <WhatsappButton />
   </v-container>
 </template>
 <script>

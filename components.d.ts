@@ -17,5 +17,6 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     Services: typeof import('./src/components/sections/Services.vue')['default']
     SinglePageLayout: typeof import('./src/components/SinglePageLayout.vue')['default']
+    WhatsappButton: typeof import('./src/components/WhatsappButton.vue')['default']
   }
 }
