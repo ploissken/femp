@@ -1,5 +1,5 @@
 <template>
-  <v-parallax src="../../assets/home-bg-2.png">
+  <v-parallax :src="bgImage">
     <v-container>
       <v-row>
         <v-col cols="12" md="6" class="mt-16 text-black">
@@ -10,3 +10,16 @@
     </v-container>
   </v-parallax>
 </template>
+
+<script>
+import desktopBg from "../../assets/home-bg.png";
+import mobileBg from "../../assets/home-bg-mobile.png";
+
+export default {
+  computed: {
+    bgImage() {
+      return this.$vuetify.display.mobile ? mobileBg : desktopBg;
+    },
+  },
+};
+</script>

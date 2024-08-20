@@ -11,11 +11,30 @@
       <v-img :src="logo" width="150" />
     </v-app-bar-title>
     <v-spacer />
-
-    <v-btn v-for="item in menuItems" :key="item" @click="onClick(item)">
-      {{ $t(`menu.${item}`) }}
-    </v-btn>
+    <v-sheet color="transparent" v-if="!$vuetify.display.mobile">
+      <v-btn v-for="item in menuItems" :key="item" @click="onClick(item)">
+        {{ $t(`menu.${item}`) }}
+      </v-btn>
+    </v-sheet>
+    <v-btn
+      v-else
+      icon="mdi-menu"
+      @click="mobileDrawerOpen = !mobileDrawerOpen"
+    />
   </v-app-bar>
+  <v-navigation-drawer v-model="mobileDrawerOpen" location="right" temporary>
+    <v-sheet class="d-flex flex-column">
+      <v-btn
+        v-for="item in menuItems"
+        :key="item"
+        @click="onClick(item)"
+        variant="plain"
+        class="text-left"
+      >
+        {{ $t(`menu.${item}`) }}
+      </v-btn>
+    </v-sheet>
+  </v-navigation-drawer>
 </template>
 
 <script>
@@ -39,6 +58,7 @@ export default {
   data() {
     return {
       menuItems: ["portfolio", "about", "services", "clients", "contact"],
+      mobileDrawerOpen: false,
     };
   },
 
@@ -54,6 +74,7 @@ export default {
 
   methods: {
     onClick(destiny) {
+      this.mobileDrawerOpen = false;
       this.goTo(`#${destiny}`, {
         duration: 500,
         easing: "linear",
