@@ -8,11 +8,16 @@
     elevation="5"
   >
     <v-app-bar-title>
-      <v-img :src="logo" width="150" />
+      <v-img
+        :src="logo"
+        width="150"
+        @click="goto('home')"
+        :style="{ cursor: 'pointer' }"
+      />
     </v-app-bar-title>
     <v-spacer />
     <v-sheet color="transparent" v-if="!$vuetify.display.mobile">
-      <v-btn v-for="item in menuItems" :key="item" @click="onClick(item)">
+      <v-btn v-for="item in menuItems" :key="item" @click="goto(item)">
         {{ $t(`menu.${item}`) }}
       </v-btn>
     </v-sheet>
@@ -27,7 +32,7 @@
       <v-btn
         v-for="item in menuItems"
         :key="item"
-        @click="onClick(item)"
+        @click="goto(item)"
         variant="plain"
         class="text-left"
       >
@@ -73,7 +78,7 @@ export default {
   },
 
   methods: {
-    onClick(destiny) {
+    goto(destiny) {
       this.mobileDrawerOpen = false;
       this.goTo(`#${destiny}`, {
         duration: 500,

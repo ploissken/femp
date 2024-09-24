@@ -1,6 +1,6 @@
 <template>
   <v-parallax :src="bgImage">
-    <v-container>
+    <v-container id="home">
       <v-row>
         <v-col cols="12" md="6" class="mt-16 text-black">
           <h1>{{ $t("home.title") }}</h1>
