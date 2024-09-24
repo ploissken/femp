@@ -9,10 +9,12 @@
   },
   "dependencies": {
     "@fontsource/montserrat": "^5.0.18",
+    "@googlemaps/js-api-loader": "^1.16.8",
     "@mdi/font": "7.4.47",
     "core-js": "^3.37.1",
     "vue": "^3.4.31",
     "vue-i18n": "^9.13.1",
+    "vue3-google-map": "^0.21.0",
     "vuetify": "^3.6.11"
   },
   "devDependencies": {
