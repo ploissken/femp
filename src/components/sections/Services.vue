@@ -21,7 +21,7 @@
           :key="index"
         >
           <v-sheet class="ma-4" :width="160">
-            <v-img :src="serviceImages[index]" :height="100" />
+            <v-img :src="serviceImages[index]" :height="200" />
             <h4 class="my-6 text-center text-uppercase">
               {{ $t(`services.example.${index + 1}`) }}
             </h4>
@@ -34,21 +34,23 @@
 
 <script>
 // https://vitejs.dev/guide/assets.html#importing-asset-as-url
-import s1 from "../../assets/services/service-1.jpg";
-import s2 from "../../assets/services/service-2.jpg";
-import s3 from "../../assets/services/service-3.jpg";
-import s4 from "../../assets/services/service-4.jpg";
-import s5 from "../../assets/services/service-5.jpg";
-import s6 from "../../assets/services/service-6.jpg";
-import s7 from "../../assets/services/service-7.jpg";
-import s8 from "../../assets/services/service-8.jpg";
-import s9 from "../../assets/services/service-9.jpg";
-import s10 from "../../assets/services/service-10.jpg";
-import s11 from "../../assets/services/service-11.jpg";
-import s12 from "../../assets/services/service-12.jpg";
-import s13 from "../../assets/services/service-13.jpg";
-import s14 from "../../assets/services/service-14.jpg";
-import s15 from "../../assets/services/service-15.jpg";
+import s1 from "../../assets/services/1.jpg";
+import s2 from "../../assets/services/2.jpg";
+import s3 from "../../assets/services/3.jpg";
+import s4 from "../../assets/services/4.jpg";
+import s5 from "../../assets/services/5.jpg";
+import s6 from "../../assets/services/6.jpg";
+import s7 from "../../assets/services/7.jpg";
+import s8 from "../../assets/services/8.jpg";
+import s9 from "../../assets/services/9.jpg";
+import s10 from "../../assets/services/10.jpg";
+import s11 from "../../assets/services/11.jpg";
+import s12 from "../../assets/services/12.jpg";
+import s13 from "../../assets/services/13.jpg";
+import s14 from "../../assets/services/14.jpg";
+import s15 from "../../assets/services/15.jpg";
+import s16 from "../../assets/services/16.jpg";
+import s17 from "../../assets/services/17.jpg";
 
 export default {
   data() {
@@ -69,6 +71,8 @@ export default {
         s13,
         s14,
         s15,
+        s16,
+        s17,
       ],
     };
   },

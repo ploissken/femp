@@ -11,6 +11,7 @@ declare module 'vue' {
     Clients: typeof import('./src/components/sections/Clients.vue')['default']
     Contact: typeof import('./src/components/sections/Contact.vue')['default']
     FempMap: typeof import('./src/components/FempMap.vue')['default']
+    Footnote: typeof import('./src/components/sections/Footnote.vue')['default']
     Home: typeof import('./src/components/sections/Home.vue')['default']
     Menu: typeof import('./src/components/Menu.vue')['default']
     Portfolio: typeof import('./src/components/sections/Portfolio.vue')['default']

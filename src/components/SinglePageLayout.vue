@@ -8,6 +8,7 @@
     <Clients />
     <Contact />
     <WhatsappButton />
+    <Footnote />
   </v-container>
 </template>
 <script>
