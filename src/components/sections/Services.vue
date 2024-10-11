@@ -20,8 +20,8 @@
           v-for="(, index) in serviceImages.length"
           :key="index"
         >
-          <v-sheet class="ma-4" :width="160">
-            <v-img :src="serviceImages[index]" :height="200" />
+          <v-sheet class="ma-4" :width="300">
+            <v-img :src="serviceImages[index]" :height="400" />
             <h4 class="my-6 text-center text-uppercase">
               {{ $t(`services.example.${index + 1}`) }}
             </h4>

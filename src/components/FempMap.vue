@@ -13,7 +13,7 @@
 <script setup>
 import { GoogleMap, AdvancedMarker } from "vue3-google-map";
 
-const gMapsApiKey = "AIzaSyBT66EuyDreCz9dHD6qRmcbbJaGWW9-GVY";
+const gMapsApiKey = process.env.VUE_APP_GMAPS_API;
 const center = { lat: -23.305877, lng: -45.9635352 };
 
 const onMarkerClick = () => {

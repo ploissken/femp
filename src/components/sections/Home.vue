@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import desktopBg from "../../assets/home-bg.png";
-import mobileBg from "../../assets/home-bg-mobile.png";
+import desktopBg from "../../assets/home/bg.jpg";
+import mobileBg from "../../assets/home/bg-mobile.jpg";
 
 export default {
   computed: {
