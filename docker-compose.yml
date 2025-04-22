@@ -1,0 +1,26 @@
+services:
+  femp:
+    image: node:23-slim
+    container_name: femp
+    restart: unless-stopped
+    working_dir: /home/node
+    volumes:
+      - ./:/home/node/:cached
+    command: bash -c "npm install && npx serve .output/public"
+    # build locally since digital ocean cant handle it
+    # command: bash -c "npm install && npm run build --prerender && npx serve .output/public"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=3000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.femp.rule=Host(`fempengenharia.com.br`)"
+      - "traefik.http.routers.femp.entrypoints=websecure"
+      - "traefik.http.routers.femp.tls.certresolver=myresolver"
+      - "traefik.http.services.femp.loadbalancer.server.port=3000"
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    external: true
