@@ -1,5 +1,5 @@
 <template>
-  <GoogleMap
+  <!-- <GoogleMap
     mapId="fempMap"
     style="width: 100%; height: 300px"
     :api-key="gMapsApiKey"
@@ -7,11 +7,12 @@
     :zoom="17"
   >
     <AdvancedMarker :options="{ position: center }" @click="onMarkerClick" />
-  </GoogleMap>
+  </GoogleMap> -->
+  <h1>to fix</h1>
 </template>
 
 <script setup>
-import { GoogleMap, AdvancedMarker } from "vue3-google-map";
+// import { GoogleMap, AdvancedMarker } from "vue3-google-map";
 
 const gMapsApiKey = process.env.VUE_APP_GMAPS_API;
 const center = { lat: -23.305877, lng: -45.9635352 };

@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <router-view />
+      <nuxt-page />
     </v-main>
   </v-app>
 </template>

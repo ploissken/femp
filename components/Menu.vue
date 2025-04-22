@@ -11,12 +11,12 @@
       <v-img
         :src="logo"
         width="150"
-        @click="goto('home')"
         :style="{ cursor: 'pointer' }"
+        @click="goto('home')"
       />
     </v-app-bar-title>
     <v-spacer />
-    <v-sheet color="transparent" v-if="!$vuetify.display.mobile">
+    <v-sheet v-if="!$vuetify.display.mobile" color="transparent">
       <v-btn v-for="item in menuItems" :key="item" @click="goto(item)">
         {{ $t(`menu.${item}`) }}
       </v-btn>
@@ -32,9 +32,9 @@
       <v-btn
         v-for="item in menuItems"
         :key="item"
-        @click="goto(item)"
         variant="plain"
         class="text-left"
+        @click="goto(item)"
       >
         {{ $t(`menu.${item}`) }}
       </v-btn>
@@ -48,16 +48,15 @@ import whiteLogo from "../assets/logo.png";
 import { useGoTo } from "vuetify";
 
 export default {
-  setup() {
-    const goTo = useGoTo();
-    return { goTo };
-  },
-
   props: {
     offsetTop: {
       required: true,
       type: Number,
     },
+  },
+  setup() {
+    const goTo = useGoTo();
+    return { goTo };
   },
 
   data() {
