@@ -12,6 +12,9 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
   ],
   css: ["@/assets/scss/global.css"],
+  image: {
+    dir: "./assets/",
+  },
   googleFonts: {
     families: {
       Montserrat: [400, 600, 700],
