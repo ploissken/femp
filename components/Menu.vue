@@ -1,22 +1,16 @@
 <template>
-  <v-app-bar
-    :class="menuColor"
-    :style="{
-      transitionProperty: 'background-color',
-      transition: 'background-color .7s',
-    }"
-    elevation="5"
-  >
+  <v-app-bar :class="['menu-bar', menuColor]" elevation="5">
     <v-app-bar-title>
       <v-img
         :src="logo"
+        class="cursor-pointer"
+        alt="logo"
         width="150"
-        :style="{ cursor: 'pointer' }"
         @click="goto('home')"
       />
     </v-app-bar-title>
     <v-spacer />
-    <v-sheet v-if="!$vuetify.display.mobile" color="transparent">
+    <v-sheet v-if="!isMobile.value" color="transparent">
       <v-btn v-for="item in menuItems" :key="item" @click="goto(item)">
         {{ $t(`menu.${item}`) }}
       </v-btn>
@@ -24,16 +18,18 @@
     <v-btn
       v-else
       icon="mdi-menu"
+      aria-label="toggle-menu-button"
       @click="mobileDrawerOpen = !mobileDrawerOpen"
     />
   </v-app-bar>
+
   <v-navigation-drawer v-model="mobileDrawerOpen" location="right" temporary>
     <v-sheet class="d-flex flex-column">
       <v-btn
         v-for="item in menuItems"
         :key="item"
-        variant="plain"
         class="text-left"
+        variant="plain"
         @click="goto(item)"
       >
         {{ $t(`menu.${item}`) }}
@@ -42,48 +38,40 @@
   </v-navigation-drawer>
 </template>
 
-<script>
+<script setup lang="ts">
+import { ref, computed, toRefs } from "vue";
+import { useGoTo, useDisplay } from "vuetify";
 import blackLogo from "../assets/logo_black.png";
 import whiteLogo from "../assets/logo.png";
-import { useGoTo } from "vuetify";
 
-export default {
-  props: {
-    offsetTop: {
-      required: true,
-      type: Number,
-    },
+const props = defineProps({
+  offsetTop: {
+    type: Number,
+    required: true,
   },
-  setup() {
-    const goTo = useGoTo();
-    return { goTo };
-  },
+});
 
-  data() {
-    return {
-      menuItems: ["portfolio", "about", "services", "clients", "contact"],
-      mobileDrawerOpen: false,
-    };
-  },
+const { offsetTop } = toRefs(props);
 
-  computed: {
-    menuColor() {
-      return this.offsetTop > 300 ? "bg-black" : "bg-white";
-    },
+const menuItems = ["portfolio", "about", "services", "clients", "contact"];
+const mobileDrawerOpen = ref(false);
 
-    logo() {
-      return this.menuColor === "bg-black" ? whiteLogo : blackLogo;
-    },
-  },
+const goTo = useGoTo();
+const display = useDisplay();
+const isMobile = computed(() => display.mobile.value);
+const isDarkMenu = computed(() => offsetTop.value > 300);
+const menuColor = computed(() => (isDarkMenu.value ? "bg-black" : "bg-white"));
+const logo = computed(() => (isDarkMenu.value ? whiteLogo : blackLogo));
 
-  methods: {
-    goto(destiny) {
-      this.mobileDrawerOpen = false;
-      this.goTo(`#${destiny}`, {
-        duration: 500,
-        easing: "linear",
-      });
-    },
-  },
-};
+function goto(destiny) {
+  mobileDrawerOpen.value = false;
+  goTo(`#${destiny}`, { duration: 500, easing: "linear" });
+}
 </script>
+
+<style scoped>
+.menu-bar {
+  transition-property: "background-color";
+  transition: background-color 0.7s ease;
+}
+</style>
