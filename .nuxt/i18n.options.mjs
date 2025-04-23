@@ -1,6 +1,6 @@
 
 // @ts-nocheck
-import locale_pt_46json_90efcf7a from "#nuxt-i18n/90efcf7a";
+import locale_pt_46json_ce9b2893 from "#nuxt-i18n/ce9b2893";
 
 export const localeCodes =  [
   "pt"
@@ -9,8 +9,8 @@ export const localeCodes =  [
 export const localeLoaders = {
   pt: [
     {
-      key: "locale_pt_46json_90efcf7a",
-      load: () => Promise.resolve(locale_pt_46json_90efcf7a),
+      key: "locale_pt_46json_ce9b2893",
+      load: () => Promise.resolve(locale_pt_46json_ce9b2893),
       cache: true
     }
   ]
@@ -51,7 +51,7 @@ export const nuxtI18nOptions = {
       name: "Portugues",
       files: [
         {
-          path: "/home/node/locales/pt.json",
+          path: "/Users/rodurico/Documents/femp/locales/pt.json",
           cache: undefined
         }
       ]
@@ -94,7 +94,7 @@ export const normalizedLocales = [
     name: "Portugues",
     files: [
       {
-        path: "/home/node/locales/pt.json",
+        path: "/Users/rodurico/Documents/femp/locales/pt.json",
         cache: undefined
       }
     ]
@@ -103,12 +103,78 @@ export const normalizedLocales = [
 
 export const NUXT_I18N_MODULE_ID = "@nuxtjs/i18n"
 export const parallelPlugin = false
-export const isSSG = true
+export const isSSG = false
 export const hasPages = true
 
 export const DEFAULT_COOKIE_KEY = "i18n_redirected"
 export const DEFAULT_DYNAMIC_PARAMS_KEY = "nuxtI18nInternal"
 export const SWITCH_LOCALE_PATH_LINK_IDENTIFIER = "nuxt-i18n-slp"
 /** client **/
+if(import.meta.hot) {
 
+function deepEqual(a, b, ignoreKeys = []) {
+  // Same reference?
+  if (a === b) return true
+
+  // Check if either is null or not an object
+  if (a == null || b == null || typeof a !== 'object' || typeof b !== 'object') {
+    return false
+  }
+
+  // Get top-level keys, excluding ignoreKeys
+  const keysA = Object.keys(a).filter(k => !ignoreKeys.includes(k))
+  const keysB = Object.keys(b).filter(k => !ignoreKeys.includes(k))
+
+  // Must have the same number of keys (after ignoring)
+  if (keysA.length !== keysB.length) {
+    return false
+  }
+
+  // Check each property
+  for (const key of keysA) {
+    if (!keysB.includes(key)) {
+      return false
+    }
+
+    const valA = a[key]
+    const valB = b[key]
+
+    // Compare functions stringified
+    if (typeof valA === 'function' && typeof valB === 'function') {
+      if (valA.toString() !== valB.toString()) {
+        return false
+      }
+    }
+    // If nested, do a normal recursive check (no ignoring at deeper levels)
+    else if (typeof valA === 'object' && typeof valB === 'object') {
+      if (!deepEqual(valA, valB)) {
+        return false
+      }
+    }
+    // Compare primitive values
+    else if (valA !== valB) {
+      return false
+    }
+  }
+
+  return true
+}
+
+
+
+async function loadCfg(config) {
+  const nuxt = useNuxtApp()
+  const { default: resolver } = await config()
+  return typeof resolver === 'function' ? await nuxt.runWithContext(() => resolver()) : resolver
+}
+
+
+  import.meta.hot.accept("../locales/pt.json", async mod => {
+    localeLoaders["pt"][0].load = () => Promise.resolve(mod.default)
+    await useNuxtApp()._nuxtI18nDev.resetI18nProperties("pt")
+  })
+
+
+
+}
 /** client-end **/
