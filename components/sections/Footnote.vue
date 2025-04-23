@@ -15,14 +15,13 @@
     </v-row>
   </v-container>
 </template>
-<script>
+
+<script setup lang="ts">
 import { useDate } from "vuetify";
-export default {
-  computed: {
-    year() {
-      const date = useDate();
-      return `by Rodrigo Souza | ${date.getYear(new Date())}`;
-    },
-  },
-};
+import { computed } from "vue";
+
+const year = computed(() => {
+  const date = useDate();
+  return `by Rodrigo Souza | ${date.getYear(new Date())}`;
+});
 </script>

@@ -12,8 +12,7 @@ type HydrationStrategies = {
 }
 type LazyComponent<T> = (T & DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }>)
 interface _GlobalComponents {
-      'FempMap': typeof import("../components/FempMap.vue")['default']
-    'WhatsappButton': typeof import("../components/WhatsappButton.vue")['default']
+      'WhatsappButton': typeof import("../components/WhatsappButton.vue")['default']
     'SectionsAbout': typeof import("../components/sections/About.vue")['default']
     'SectionsClients': typeof import("../components/sections/Clients.vue")['default']
     'SectionsContact': typeof import("../components/sections/Contact.vue")['default']
@@ -47,8 +46,7 @@ interface _GlobalComponents {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
-      'LazyFempMap': LazyComponent<typeof import("../components/FempMap.vue")['default']>
-    'LazyWhatsappButton': LazyComponent<typeof import("../components/WhatsappButton.vue")['default']>
+      'LazyWhatsappButton': LazyComponent<typeof import("../components/WhatsappButton.vue")['default']>
     'LazySectionsAbout': LazyComponent<typeof import("../components/sections/About.vue")['default']>
     'LazySectionsClients': LazyComponent<typeof import("../components/sections/Clients.vue")['default']>
     'LazySectionsContact': LazyComponent<typeof import("../components/sections/Contact.vue")['default']>
@@ -88,7 +86,6 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
-export const FempMap: typeof import("../components/FempMap.vue")['default']
 export const WhatsappButton: typeof import("../components/WhatsappButton.vue")['default']
 export const SectionsAbout: typeof import("../components/sections/About.vue")['default']
 export const SectionsClients: typeof import("../components/sections/Clients.vue")['default']
@@ -123,7 +120,6 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
-export const LazyFempMap: LazyComponent<typeof import("../components/FempMap.vue")['default']>
 export const LazyWhatsappButton: LazyComponent<typeof import("../components/WhatsappButton.vue")['default']>
 export const LazySectionsAbout: LazyComponent<typeof import("../components/sections/About.vue")['default']>
 export const LazySectionsClients: LazyComponent<typeof import("../components/sections/Clients.vue")['default']>
