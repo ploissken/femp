@@ -16,14 +16,17 @@
     </v-row>
     <v-row class="my-16">
       <v-slide-group show-arrows mobile center-active :scroll-offset="60">
-        <v-slide-group-item
-          v-for="(, index) in serviceImages.length"
-          :key="index"
-        >
+        <v-slide-group-item v-for="index in numberOfServiceImages" :key="index">
           <v-sheet class="ma-4" :width="300">
-            <v-img :src="serviceImages[index]" :height="400" />
+            <nuxt-img
+              format="webp"
+              height="400"
+              :style="{ width: '100%', objectFit: 'contain' }"
+              :src="`services/${index}.jpg`"
+              :alt="$t(`services.example.${index}`)"
+            />
             <h4 class="my-6 text-center text-uppercase">
-              {{ $t(`services.example.${index + 1}`) }}
+              {{ $t(`services.example.${index}`) }}
             </h4>
           </v-sheet>
         </v-slide-group-item>
@@ -32,49 +35,6 @@
   </v-container>
 </template>
 
-<script>
-// https://vitejs.dev/guide/assets.html#importing-asset-as-url
-import s1 from "../../assets/services/1.jpg";
-import s2 from "../../assets/services/2.jpg";
-import s3 from "../../assets/services/3.jpg";
-import s4 from "../../assets/services/4.jpg";
-import s5 from "../../assets/services/5.jpg";
-import s6 from "../../assets/services/6.jpg";
-import s7 from "../../assets/services/7.jpg";
-import s8 from "../../assets/services/8.jpg";
-import s9 from "../../assets/services/9.jpg";
-import s10 from "../../assets/services/10.jpg";
-import s11 from "../../assets/services/11.jpg";
-import s12 from "../../assets/services/12.jpg";
-import s13 from "../../assets/services/13.jpg";
-import s14 from "../../assets/services/14.jpg";
-import s15 from "../../assets/services/15.jpg";
-import s16 from "../../assets/services/16.jpg";
-import s17 from "../../assets/services/17.jpg";
-
-export default {
-  data() {
-    return {
-      serviceImages: [
-        s1,
-        s2,
-        s3,
-        s4,
-        s5,
-        s6,
-        s7,
-        s8,
-        s9,
-        s10,
-        s11,
-        s12,
-        s13,
-        s14,
-        s15,
-        s16,
-        s17,
-      ],
-    };
-  },
-};
+<script setup lang="ts">
+import { numberOfServiceImages } from "~/config/consts";
 </script>

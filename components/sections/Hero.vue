@@ -1,6 +1,6 @@
 <template>
   <v-parallax :src="bgImage">
-    <v-container id="home">
+    <v-container id="home" class="h-screen">
       <v-row>
         <v-col cols="12" md="6" class="mt-16 text-black">
           <h1>{{ $t("home.title") }}</h1>
@@ -11,15 +11,12 @@
   </v-parallax>
 </template>
 
-<script>
+<script setup lang="ts">
+import { computed } from "vue";
+import { useDisplay } from "vuetify";
 import desktopBg from "../../assets/home/bg.jpg";
 import mobileBg from "../../assets/home/bg-mobile.jpg";
 
-export default {
-  computed: {
-    bgImage() {
-      return this.$vuetify.display.mobile ? mobileBg : desktopBg;
-    },
-  },
-};
+const display = useDisplay();
+const bgImage = computed(() => (display.mobile.value ? mobileBg : desktopBg));
 </script>

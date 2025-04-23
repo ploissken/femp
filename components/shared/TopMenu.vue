@@ -10,7 +10,7 @@
       />
     </v-app-bar-title>
     <v-spacer />
-    <v-sheet v-if="!isMobile.value" color="transparent">
+    <v-sheet v-if="!isMobile" color="transparent">
       <v-btn v-for="item in menuItems" :key="item" @click="goto(item)">
         {{ $t(`menu.${item}`) }}
       </v-btn>
@@ -63,7 +63,7 @@ const isDarkMenu = computed(() => offsetTop.value > 300);
 const menuColor = computed(() => (isDarkMenu.value ? "bg-black" : "bg-white"));
 const logo = computed(() => (isDarkMenu.value ? whiteLogo : blackLogo));
 
-function goto(destiny) {
+function goto(destiny: string) {
   mobileDrawerOpen.value = false;
   goTo(`#${destiny}`, { duration: 500, easing: "linear" });
 }
