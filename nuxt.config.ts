@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/google-fonts",
   ],
-  css: ["@/assets/scss/global.css"],
+  css: ["@/assets/styles/global.css"],
   image: {
     dir: "./assets/",
   },
