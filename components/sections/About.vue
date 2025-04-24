@@ -8,7 +8,13 @@
           <p class="text-justify pt-2">{{ $t("about.company_plus") }}</p>
         </v-col>
         <v-col cols="12" md="6" class="d-flex justify-center align-center">
-          <v-img src="../../assets/about.jpg" />
+          <!-- <v-img src="../../assets/about.jpg" /> -->
+          <nuxt-img
+            format="webp"
+            :style="{ width: '100%', objectFit: 'cover' }"
+            src="about.jpg"
+            alt="company team"
+          />
         </v-col>
       </v-row>
       <v-row class="my-16">

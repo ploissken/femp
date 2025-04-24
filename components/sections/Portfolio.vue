@@ -15,14 +15,18 @@
           color="black"
           hide-delimiter-background
         >
-          <v-carousel-item
-            v-for="{ img, title } in simulationItems"
-            :key="title"
-            touch
-          >
+          <v-carousel-item v-for="title in simulationItems" :key="title" touch>
             <v-sheet height="80%">
-              <h4 class="text-center">{{ $t(title) }}</h4>
-              <v-img :src="img" />
+              <h4 class="text-center">
+                {{ $t(`portfolio.simulation.${title}`) }}
+              </h4>
+              <nuxt-img
+                format="webp"
+                height="320"
+                :style="{ width: '100%', objectFit: 'contain' }"
+                :src="`simulations/${title}.jpg`"
+                :alt="$t(`portfolio.simulation.${title}`)"
+              />
             </v-sheet>
           </v-carousel-item>
         </v-carousel>
@@ -30,7 +34,12 @@
     </v-row>
     <v-row class="my-16">
       <v-col cols="12" md="6">
-        <v-img src="../../assets/simulations/analysis.jpg" cover />
+        <nuxt-img
+          format="webp"
+          :style="{ width: '100%', objectFit: 'cover' }"
+          src="simulations/analysis.jpg"
+          :alt="$t(`portfolio.simulation.analysis`)"
+        />
       </v-col>
       <v-col cols="12" md="6" class="px-8">
         <h2>{{ $t("portfolio.analysis.title") }}</h2>
@@ -44,35 +53,6 @@
   </v-container>
 </template>
 
-<script>
-// https://vitejs.dev/guide/assets.html#importing-asset-as-url
-import linear from "../../assets/simulations/linear.jpg";
-import buckling from "../../assets/simulations/buckling.jpg";
-import modal from "../../assets/simulations/modal.jpg";
-import fatigue from "../../assets/simulations/fatigue.jpg";
-
-export default {
-  data() {
-    return {
-      simulationItems: [
-        {
-          img: linear,
-          title: "portfolio.simulation.linear",
-        },
-        {
-          img: buckling,
-          title: "portfolio.simulation.buckling",
-        },
-        {
-          img: modal,
-          title: "portfolio.simulation.modal",
-        },
-        {
-          img: fatigue,
-          title: "portfolio.simulation.fatigue",
-        },
-      ],
-    };
-  },
-};
+<script setup lang="ts">
+const simulationItems = ["linear", "buckling", "modal", "fatigue"];
 </script>

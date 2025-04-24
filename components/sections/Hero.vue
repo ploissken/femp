@@ -14,8 +14,8 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useDisplay } from "vuetify";
-import desktopBg from "../../assets/home/bg.jpg";
-import mobileBg from "../../assets/home/bg-mobile.jpg";
+import desktopBg from "~/assets/home/bg.jpg";
+import mobileBg from "~/assets/home/bg-mobile.jpg";
 
 const display = useDisplay();
 const bgImage = computed(() => (display.mobile.value ? mobileBg : desktopBg));
