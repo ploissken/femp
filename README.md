@@ -73,6 +73,7 @@ Deployment is done on DigitalOcean, take a look at [Femp Engenharia](https://fem
 - `assets/` — Static assets consumed by the page
 - `config/` — Magic numbers as consts to help rendering
 - `locales/` — Currently only in PT, but ready for more
+- `composables/` — A simple composable to handle SEO
 - `nuxt.config.ts` — Nuxt app configuration
 - `docker-compose.yml` — Docker container for deployment under Traefik Orchestration
 

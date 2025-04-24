@@ -14,8 +14,16 @@
 
 <script setup lang="ts">
 const offsetTop = ref(0);
+const { t } = useI18n();
 
-function onScroll(e: Event) {
-  offsetTop.value = (e.target?.defaultView as Window).scrollY;
+function onScroll(_e: Event) {
+  offsetTop.value = window.scrollY;
 }
+
+useSeo({
+  title: t("seo.title"),
+  description: t("seo.ogContent"),
+  url: t("seo.url"),
+  image: t("seo.imgUrl"),
+});
 </script>
