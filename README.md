@@ -1,75 +1,116 @@
-# Nuxt Minimal Starter
+# Femp Engenharia
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 📜 Overview
 
-## Setup
+Welcome to the official website repository of **Femp Engenharia**, a Brazilian engineering consultancy specializing in structural analysis, finite element modeling (FEM), and advanced computational simulations. This repository hosts the source code for our online presence, built with a focus on performance, accessibility, and SEO.
 
-Make sure to install dependencies:
+---
 
-```bash
-# npm
-npm install
+## 🔑 Key Features
 
-# pnpm
-pnpm install
+- 🚀 **Fast & Flexible:** Built using the latest techs available for blazing fast and SEO friendly landing pages
+- 📦 **Modular:** Landing page architecture is quite modular and easy to tweak
+- 🧑‍💻 **Developer Showoff:** I've been coding much more with React lately, but this may be enough for you to hire me in a Vue project 😉
 
-# yarn
-yarn install
+---
 
-# bun
-bun install
-```
+## 🛠 Technologies Used
 
-## Development Server
+- **Frontend:** Vue3, Vuetify, Nuxt.js
+- **Deployment:** SSG generated and deployed to DigitalOcean least expensive machine
 
-Start the development server on `http://localhost:3000`:
+---
 
-```bash
-# npm
-npm run dev
+## 🚀 Project Setup
 
-# pnpm
-pnpm dev
+### Prerequisites
 
-# yarn
-yarn dev
+Make sure you have the following installed:
 
-# bun
-bun run dev
-```
+- [Node.js](https://nodejs.org/) (>=18.0.0)
+- [Npm](https://www.npmjs.com/) (recommended, but you can also use yarn)
 
-## Production
+### Installation
 
-Build the application for production:
+Clone the repository and install dependencies:
 
-```bash
-# npm
-npm run build
+    git clone https://github.com/ploissken/femp.git
+    cd femp
+    npm run install
 
-# pnpm
-pnpm build
+### Development
 
-# yarn
-yarn build
+Start the local development server:
 
-# bun
-bun run build
-```
+    npm run dev
 
-Locally preview production build:
+The site will be available at [http://localhost:3000](http://localhost:3000)
 
-```bash
-# npm
-npm run preview
+### Production
 
-# pnpm
-pnpm preview
+Generate a production build:
 
-# yarn
-yarn preview
+    npm run build
 
-# bun
-bun run preview
-```
+Preview the production output:
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+    npm run preview
+
+### Deployment
+
+Deployment is done on DigitalOcean, take a look at [Femp Engenharia](https://fempengenharia.com.br). Built statically (SSG) with
+
+    npm run generate
+
+    npx serve .output/public
+
+---
+
+## 🧩 Project Structure
+
+- `components/` — Reusable UI components
+- `pages/` — Landing page index with all it's Sections
+- `assets/` — Static assets consumed by the page
+- `config/` — Magic numbers as consts to help rendering
+- `locales/` — Currently only in PT, but ready for more
+- `nuxt.config.ts` — Nuxt app configuration
+- `docker-compose.yml` — Docker container for deployment under Traefik Orchestration
+
+---
+
+## 🛠 Built With
+
+- **Nuxt 3** — Vue framework for SSR & static sites
+- **Vuetify 3** — Material Design UI library
+- **TypeScript** — Type-safe JavaScript
+- **Vite** — Fast build tool & dev server
+- **Nuxt Image** — Built-in image optimization
+- **Docker** — Containerized deployment
+
+---
+
+## 🌐 Localization
+
+- Default: **pt-BR**
+- Future: **en-US** (comming soon)
+
+---
+
+## 📸 Screenshots
+
+![Home Page](./public/screenshots/home.png)  
+_Hero page_
+
+Live demo [here](https://fempengenharia.com.br)
+
+---
+
+## 📄 License
+
+CC BY 4.0 — see [LICENSE](https://creativecommons.org/licenses/by/4.0/) for details.
+
+---
+
+## 📬 Contact
+
+You can reach me at ploissken at gmail or connect with me on [LinkedIn](https://www.linkedin.com/in/rodrigo-souza-97302724/).
