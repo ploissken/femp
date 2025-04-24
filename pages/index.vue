@@ -7,8 +7,9 @@
     <SectionsServices />
     <SectionsClients />
     <SectionsContact />
-    <WhatsappButton />
-    <SectionsFootnote />
+    <!-- <WhatsappButton /> -->
+    <SharedWhatsappButton />
+    <SharedFootnote />
   </v-container>
 </template>
 <script>
