@@ -1,11 +1,13 @@
 <template>
   <v-app-bar :class="['menu-bar', menuColor]" elevation="5">
     <v-app-bar-title>
-      <v-img
-        :src="logo"
+      <nuxt-img
+        format="webp"
+        height="50"
         class="cursor-pointer"
-        alt="logo"
         width="150"
+        alt="femp logo"
+        :src="logo"
         @click="goto('home')"
       />
     </v-app-bar-title>
@@ -41,8 +43,6 @@
 <script setup lang="ts">
 import { ref, computed, toRefs } from "vue";
 import { useGoTo, useDisplay } from "vuetify";
-import blackLogo from "../assets/logo_black.png";
-import whiteLogo from "../assets/logo.png";
 
 const props = defineProps({
   offsetTop: {
@@ -61,7 +61,7 @@ const display = useDisplay();
 const isMobile = computed(() => display.mobile.value);
 const isDarkMenu = computed(() => offsetTop.value > 300);
 const menuColor = computed(() => (isDarkMenu.value ? "bg-black" : "bg-white"));
-const logo = computed(() => (isDarkMenu.value ? whiteLogo : blackLogo));
+const logo = computed(() => (isDarkMenu.value ? "logo.png" : "logo_black.png"));
 
 function goto(destiny: string) {
   mobileDrawerOpen.value = false;
