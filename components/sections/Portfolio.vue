@@ -38,7 +38,7 @@
           format="webp"
           :style="{ width: '100%', objectFit: 'cover' }"
           src="images/simulations/analysis.jpg"
-          :alt="$t(`portfolio.simulation.analysis`)"
+          :alt="$t(`portfolio.analysis.title`)"
         />
       </v-col>
       <v-col cols="12" md="6" class="px-8">

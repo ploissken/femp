@@ -11,16 +11,11 @@
     <SharedFootnote />
   </v-container>
 </template>
-<script>
-export default {
-  data: () => ({
-    offsetTop: 0,
-  }),
 
-  methods: {
-    onScroll(e) {
-      this.offsetTop = e.target.defaultView.scrollY;
-    },
-  },
-};
+<script setup lang="ts">
+const offsetTop = ref(0);
+
+function onScroll(e: Event) {
+  offsetTop.value = (e.target?.defaultView as Window).scrollY;
+}
 </script>
