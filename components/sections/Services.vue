@@ -22,7 +22,7 @@
               format="webp"
               height="400"
               :style="{ width: '100%', objectFit: 'contain' }"
-              :src="`services/${index}.jpg`"
+              :src="`images/services/${index}.jpg`"
               :alt="$t(`services.example.${index}`)"
             />
             <h4 class="my-6 text-center text-uppercase">

@@ -11,7 +11,7 @@
             @click="onClick"
           >
             <nuxt-img
-              src="map.png"
+              src="images/contact/map.png"
               format="webp"
               sizes="sm:420px md:500px lg:600px"
             />

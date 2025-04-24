@@ -7,7 +7,7 @@
         class="cursor-pointer"
         width="150"
         alt="femp logo"
-        :src="logo"
+        :src="`images/logo/${logo}`"
         @click="goto('home')"
       />
     </v-app-bar-title>

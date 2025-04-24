@@ -11,7 +11,7 @@
           <nuxt-img
             format="webp"
             :style="{ width: '100%', objectFit: 'cover' }"
-            src="about.jpg"
+            src="images/about/team.jpg"
             alt="company team"
           />
         </v-col>

@@ -24,7 +24,7 @@
                 format="webp"
                 height="320"
                 :style="{ width: '100%', objectFit: 'contain' }"
-                :src="`simulations/${title}.jpg`"
+                :src="`images/simulations/${title}.jpg`"
                 :alt="$t(`portfolio.simulation.${title}`)"
               />
             </v-sheet>
@@ -37,7 +37,7 @@
         <nuxt-img
           format="webp"
           :style="{ width: '100%', objectFit: 'cover' }"
-          src="simulations/analysis.jpg"
+          src="images/simulations/analysis.jpg"
           :alt="$t(`portfolio.simulation.analysis`)"
         />
       </v-col>

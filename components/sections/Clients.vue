@@ -10,7 +10,7 @@
             format="webp"
             height="100"
             :style="{ width: '100%', objectFit: 'contain' }"
-            :src="`clients/${index}.jpg`"
+            :src="`images/clients/${index}.jpg`"
             :alt="`clients logo ${index}`"
           />
         </v-sheet>
